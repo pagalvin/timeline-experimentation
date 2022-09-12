@@ -1,0 +1,37 @@
+
+.line {
+    border-bottom: 2px solid rgb(54, 5, 231);
+    display: block;
+    /* margin-left: 25px; */
+}
+
+.timeMarker {
+    border-left: 3px solid green;
+    top: 0;
+    bottom:0;
+}
+
+.timeMarkerSmall {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.timeMarkerLarge {
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.timeMarkerSelected {
+    border-left: 5px solid red;
+}
+
+.m10percent {
+    /* margin-left: 25px; */
+}
+
+
+.timelineContainer {
+    margin-top: 100px;
+    width: 550px;
+    height: 180px;
+}
