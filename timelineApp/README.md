@@ -1,6 +1,10 @@
-# Getting Started with Create React App
-
+# Timeline App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+It was kicked off on 9/11/22
+
+Goal is to create an interesting and useful visualization for project milestones, to help project managers plan ahead for up-coming milestones and to help managers of project managers and other interested parties to hold everyone accountable to these milestones.
+
 
 ## Available Scripts
 
