@@ -1,22 +1,19 @@
 import React, { useState } from 'react';
 import DetailsViewer from './DetailsViewer/DetailsViewer';
+import { TimelineData } from './TimelineData';
 import './TimeLineExperiment1.css';
 
-interface timelineData {
-    Title : string;
-    idx: number;
-}
 
 function TimeLineExperiment1() {
 
     
-    const scenario1 : timelineData[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19].map(i => (
+    const scenario1 : TimelineData[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19].map(i => (
         { Title: `Scenario 1, index [${i}]`, idx: i }));
 
     const calculateIindexPixelsToTheLeft: () => string = () => { return Math.floor(500 / currentTimelineDataSet.length).toString() + "px"; }
 
     const [currentTimelineDataSet, setCurrentTimelineDataSet] = useState(scenario1);
-    const [currentTimelineMilestone, setCurrentTimelineMilestone] = useState({} as timelineData);
+    const [currentTimelineMilestone, setCurrentTimelineMilestone] = useState({} as TimelineData);
     const [currentIndexPixelsToTheLeft, setCurrentIndexPixelsToTheLeft] = useState(calculateIindexPixelsToTheLeft());
     
     const staticReponse = (
@@ -46,14 +43,14 @@ function TimeLineExperiment1() {
     );
 
 
-    const scenario2 : timelineData[] = [1, 2, 3, 4, 5].map(i => ({ Title: `Milestone / Activity [${i}]`, idx: i }));
+    const scenario2 : TimelineData[] = [1, 2, 3, 4, 5].map(i => ({ Title: `Milestone / Activity [${i}]`, idx: i }));
 
 
     const getClass: (idx: number) => string = (idx: number) => {
         return idx % 2 === 0 ? "timeMarkerSmall" : "timeMarkerLarge"
     }
 
-    const detailViewer = (milestone : timelineData) => {
+    const detailViewer = (milestone : TimelineData) => {
         return (
          <span>
                 DetailViewer, current idx: {milestone.idx} 
@@ -67,7 +64,7 @@ function TimeLineExperiment1() {
         );
     };
 
-    const setScenario = (scenarioData : timelineData[]) => {
+    const setScenario = (scenarioData : TimelineData[]) => {
         setCurrentIndexPixelsToTheLeft(calculateIindexPixelsToTheLeft());
         setCurrentTimelineDataSet(scenarioData);
     }
